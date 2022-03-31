@@ -1,0 +1,39 @@
+<div class="movie-content">
+    <div class="movie-poster">
+        <div class="movie-img">
+            <img src="{{databyId.image}}">
+        </div>
+    </div>
+
+    <div class="movie-data">
+        <div class="movie-info">
+            <div class="movie-head">
+                <h1 class="movie-title">{{databyId.title}}</h1>
+                <h1 class="movie-tagline">{{databyId.tagline}}</h1>
+            </div>
+            <div class="movie-subdata">
+                <div class="movie-left">
+                    <p class="movie-stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        {{databyId.review}}
+                    </p>
+                </div>
+                <div class="movie-right">{{databyId.time}}</div>
+            </div>
+            <h3 class="movie-fields">The Genres</h3>
+            <div class="movie-tags">
+                <span class="movie-taxonomy">{{databyId.generes}}</span>
+            </div>
+            <h3 class="movie-fields">The Synopsis</h3>
+            <p class="movie-description">{{databyId.synopsis}}</p>
+        </div>
+        <h3 class="movie-fields">The Actors</h3>
+        <div class="movie-tags">
+            <a class="movie-taxonomy" *ngFor="let a of databyId.actors">{{a}}</a>
+        </div>
+
+        <button (click)="backButton()" class="btn btn-outline-secondary">
+            back</button>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+<!-- 	POPULAR SECTION -->
+<div class="main bg-secondary">
+    <div class="inner">
+        <div class="row p-2 w-100 ">
+            <div class="col-md-6 m-3 ">
+                <form class="form-inline my-2 my-lg-0 ">
+                    <input class="form-control   mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                        [(ngModel)]="search" name="search">
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <ng-container *ngIf="( data | search : search) as result">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3" *ngFor="let item of data | search:search">
+                        <div class="card shadow rounded-1 h-100">
+                            <div class="card-body">
+                                <div class="heightFix">
+                                    <img src="{{item.image}}" class="img-fluid rounded shadow myImg" alt="">
+                                </div>
+                                <h4 class="movie-name">{{item.title}}</h4>
+                                <h6 class="movie-tagline">{{item.tagline}}</h6>
+                                <div class="review pb-1">{{item.review}} &#9733;</div>
+                                <button class="btn btn-outline-success" (click)="showMore(item)">Show More >></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 no-data" *ngIf="result.length === 0">
+                        <img class="img-fluid" src="../../../assets/images/no-data.jpg" alt="">
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

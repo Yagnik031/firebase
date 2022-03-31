@@ -1,0 +1,34 @@
+.movie-name {
+  height: 60px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movie-tagline {
+  height: 40px;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.heightFix {
+  height: 400px;
+  overflow: hidden;
+}
+.myImg {
+  width: 260px;
+  height: 400px;
+  object-fit: cover;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+  }
+}
+input {
+  margin-left: 100%;
+}

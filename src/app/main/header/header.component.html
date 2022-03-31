@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark text-white myHeader d-flex justify-content-between p-3 mb-3">
+    <a class="navbar-brand text-white " routerLink="/">
+        <!-- R<sup>o</sup>binH<sup>o</sup><sub>o</sub>d -->
+        <div class="box">
+            <div class="title">
+                <span class="block"></span>
+                <h1>RobinHood<span></span></h1>
+            </div>
+            <div class="role">
+                <div class="block"></div>
+                <p>Web Developer</p>
+            </div>
+        </div>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/main/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/main/dashboard">Dashboard</a>
+            </li>
+        </ul>
+    </div>
+    <div class="myForm btn-group">
+
+        <div class="dropdown ">
+            <button class="dropbtn"></button>
+            <div class="dropdown-content">
+                <a class="dropdown-item" (click)="logout()"> LogOut <img class="logout"
+                        src="../../../assets/svg/logout.svg" alt=""></a>
+
+            </div>
+        </div>
+    </div>
+</nav>
